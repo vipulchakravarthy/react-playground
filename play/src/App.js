@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import ListGroup from 'react-bootstrap/ListGroup';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+  const variant = ["success", "danger", "warning"]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h3>Vipul</h3>
+      <ListGroup>
+        <ListGroup.Item>No style</ListGroup.Item>
+        {variant.map((item, index) => {
+          return (
+            <ListGroup.Item key={index} variant={item} onClick={() => alert('card clicked')}>{item}</ListGroup.Item>
+          )
+        })}
+      </ListGroup>
     </div>
   );
 }
