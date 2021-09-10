@@ -2,10 +2,12 @@ import './App.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import ToggleComponent from './components/ToggleComponent/ToggleComponent';
+
 function App() {
   return (
     <div className="">
-      <h3>Vipul</h3>
+      <ToggleComponent />
     </div>
   );
 }
